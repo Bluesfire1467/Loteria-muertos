@@ -295,14 +295,23 @@
     - Verificar funcionalidad táctil en móviles
     - _Requisitos: 1.3, 1.4_
 
-- [ ] 10. Integrar sistema de audio
-  - [ ] 10.1 Implementar AudioManager
+- [x] 10. Integrar sistema de audio
+
+
+
+
+
+  - [x] 10.1 Implementar AudioManager
+
+
     - Crear sistema de reproducción de música de fondo
     - Implementar efectos de sonido para acciones del juego
     - Agregar controles de volumen y mute
     - _Requisitos: 2.4_
 
-  - [ ] 10.2 Agregar audio cultural mexicano
+  - [x] 10.2 Agregar audio cultural mexicano
+
+
     - Integrar música tradicional mexicana de fondo
     - Crear efectos de sonido temáticos para acciones
     - Implementar narración en español para cartas cantadas

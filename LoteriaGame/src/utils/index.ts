@@ -100,3 +100,32 @@ export {
   type CantorState,
   type CantorPreset
 } from './cantor'
+
+// ============================================================================
+// AUDIO MANAGEMENT UTILITIES
+// ============================================================================
+
+export {
+  AudioManager,
+  audioManager,
+  initializeAudio,
+  type AudioTrack,
+  type AudioManagerOptions
+} from './audioManager'
+
+export {
+  MexicanAudioManager,
+  mexicanAudioManager,
+  playMexicanMusic,
+  narrateCard,
+  playCulturalEffect,
+  celebrateVictory,
+  preloadMexicanAudio,
+  type MexicanAudioTrack,
+  type CardNarration
+} from './mexicanAudioManager'
+
+export {
+  AudioSynthesizer,
+  audioSynthesizer
+} from './audioSynthesizer'
