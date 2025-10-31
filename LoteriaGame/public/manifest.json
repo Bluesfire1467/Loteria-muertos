@@ -1,0 +1,22 @@
+{
+  "name": "Lotería Día de Muertos",
+  "short_name": "Lotería",
+  "description": "Juego tradicional mexicano de lotería con temática del Día de los Muertos",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2D1B69",
+  "theme_color": "#FF6B35",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}
