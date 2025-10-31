@@ -1,0 +1,270 @@
+/* Mixins CSS para elementos culturales del Día de Muertos */
+
+/* Mixin para elementos con temática de papel picado */
+.papel-picado-element {
+  position: relative;
+  overflow: hidden;
+}
+
+.papel-picado-element::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    radial-gradient(circle at 20% 20%, var(--accent-gold) 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, var(--primary-orange) 1px, transparent 1px),
+    radial-gradient(circle at 40% 60%, var(--secondary-purple) 1px, transparent 1px);
+  background-size: 30px 30px, 25px 25px, 35px 35px;
+  background-position: 0 0, 15px 15px, 7px 7px;
+  opacity: 0.1;
+  animation: papel-picado-float 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes papel-picado-float {
+  0%, 100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(10px) translateY(-5px) rotate(1deg);
+  }
+  50% {
+    transform: translateX(-5px) translateY(-10px) rotate(-0.5deg);
+  }
+  75% {
+    transform: translateX(-10px) translateY(-5px) rotate(0.5deg);
+  }
+}
+
+/* Mixin para bordes con flores de cempasúchil */
+.cempasuchil-border {
+  border: 2px solid transparent;
+  background: 
+    linear-gradient(var(--background-primary), var(--background-primary)) padding-box,
+    linear-gradient(45deg, var(--accent-gold), var(--primary-orange), var(--accent-gold)) border-box;
+  position: relative;
+}
+
+.cempasuchil-border::after {
+  content: '🌼';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 16px;
+  animation: cempasuchil-pulse 2s ease-in-out infinite;
+}
+
+@keyframes cempasuchil-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Mixin para elementos con sombra de calavera */
+.calavera-shadow {
+  box-shadow: 
+    0 0 20px rgba(255, 107, 53, 0.3),
+    inset 0 0 20px rgba(114, 9, 183, 0.1),
+    0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.calavera-shadow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 211, 63, 0.1) 0%,
+    rgba(255, 107, 53, 0.05) 50%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Mixin para texto con efecto de celebración */
+.celebration-text {
+  background: var(--gradient-celebration);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: celebration-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes celebration-shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Mixin para botones culturales */
+.cultural-button {
+  position: relative;
+  background: var(--gradient-sunset);
+  border: none;
+  border-radius: var(--border-radius-lg);
+  color: var(--text-inverse);
+  font-weight: 600;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.cultural-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left var(--transition-slow);
+}
+
+.cultural-button:hover::before {
+  left: 100%;
+}
+
+.cultural-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.cultural-button:active {
+  transform: translateY(0);
+}
+
+/* Mixin para cards culturales */
+.cultural-card {
+  background: var(--background-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-medium);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.cultural-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-celebration);
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.cultural-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--border-accent);
+}
+
+/* Mixin para patrones mexicanos tradicionales */
+.mexican-pattern {
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      var(--accent-gold) 0px,
+      var(--accent-gold) 2px,
+      transparent 2px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      var(--primary-orange) 0px,
+      var(--primary-orange) 2px,
+      transparent 2px,
+      transparent 10px
+    );
+  opacity: 0.1;
+}
+
+/* Mixin para elementos interactivos con feedback cultural */
+.cultural-interactive {
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.cultural-interactive:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.cultural-interactive:active {
+  transform: scale(0.98);
+  filter: brightness(0.9);
+}
+
+/* Utilidades para animaciones culturales */
+.animate-marigold {
+  animation: marigold-sway 4s ease-in-out infinite;
+}
+
+@keyframes marigold-sway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+.animate-skull-dance {
+  animation: skull-dance 3s ease-in-out infinite;
+}
+
+@keyframes skull-dance {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  33% {
+    transform: rotate(3deg) scale(1.05);
+  }
+  66% {
+    transform: rotate(-3deg) scale(0.95);
+  }
+}
+
+.animate-fiesta {
+  animation: fiesta-bounce 2s ease-in-out infinite;
+}
+
+@keyframes fiesta-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

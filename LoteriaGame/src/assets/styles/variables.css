@@ -1,0 +1,131 @@
+/* Variables CSS para el tema del Día de Muertos */
+:root {
+  /* Colores principales del Día de Muertos */
+  --primary-orange: #FF6B35;
+  --secondary-purple: #7209B7;
+  --accent-gold: #FFD23F;
+  --background-dark: #2D1B69;
+  --text-light: #F7F7F7;
+  --success-green: #06FFA5;
+  --error-red: #FF006E;
+  
+  /* Colores adicionales */
+  --warm-orange: #FF8C42;
+  --deep-purple: #5A189A;
+  --bright-yellow: #FFBE0B;
+  --soft-pink: #FB8500;
+  --dark-navy: #1A0B3D;
+  
+  /* Gradientes temáticos */
+  --gradient-sunset: linear-gradient(135deg, var(--primary-orange), var(--accent-gold));
+  --gradient-night: linear-gradient(135deg, var(--background-dark), var(--secondary-purple));
+  --gradient-celebration: linear-gradient(45deg, var(--accent-gold), var(--primary-orange), var(--secondary-purple));
+  
+  /* Sombras */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 20px rgba(255, 211, 63, 0.3);
+  
+  /* Tipografía */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-display: 'Playfair Display', Georgia, serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  
+  /* Espaciado */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Bordes y radios */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-radius-full: 9999px;
+  
+  /* Transiciones */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+  
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* Tema oscuro (por defecto) */
+[data-theme="dark"], :root {
+  --background-primary: #2D1B69;
+  --background-secondary: #1A0B3D;
+  --background-card: rgba(255, 255, 255, 0.1);
+  --background-overlay: rgba(0, 0, 0, 0.8);
+  
+  --text-primary: #F7F7F7;
+  --text-secondary: #E5E5E5;
+  --text-muted: #B8B8B8;
+  --text-inverse: #2D1B69;
+  
+  --border-primary: rgba(255, 211, 63, 0.2);
+  --border-secondary: rgba(255, 255, 255, 0.1);
+  --border-accent: rgba(255, 211, 63, 0.4);
+}
+
+/* Tema claro */
+[data-theme="light"] {
+  --background-primary: #FFF8E7;
+  --background-secondary: #F5E6D3;
+  --background-card: rgba(255, 255, 255, 0.9);
+  --background-overlay: rgba(255, 255, 255, 0.9);
+  
+  --text-primary: #2D1B69;
+  --text-secondary: #5A189A;
+  --text-muted: #7C7C7C;
+  --text-inverse: #F7F7F7;
+  
+  --border-primary: rgba(114, 9, 183, 0.2);
+  --border-secondary: rgba(45, 27, 105, 0.1);
+  --border-accent: rgba(114, 9, 183, 0.4);
+  
+  /* Ajustar gradientes para tema claro */
+  --gradient-night: linear-gradient(135deg, var(--background-primary), var(--background-secondary));
+  --shadow-soft: 0 2px 8px rgba(45, 27, 105, 0.1);
+  --shadow-medium: 0 4px 16px rgba(45, 27, 105, 0.15);
+  --shadow-strong: 0 8px 32px rgba(45, 27, 105, 0.2);
+}
+
+/* Utilidades para elementos culturales */
+.papel-picado-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--accent-gold) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, var(--primary-orange) 2px, transparent 2px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.cempasuchil-border {
+  border: 2px solid var(--accent-gold);
+  border-image: linear-gradient(45deg, var(--accent-gold), var(--primary-orange)) 1;
+}
+
+.calavera-shadow {
+  box-shadow: 
+    0 0 20px rgba(255, 107, 53, 0.3),
+    inset 0 0 20px rgba(114, 9, 183, 0.1);
+}
